@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://Karan0811:Pamnanichotu!8@konnector-8xodv.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "111ab77f6933b65ea9b3",
+  "githubSecret": "0953a6cd2e303fc1ecdfd93419b867fc8fa7e58e"
+}
