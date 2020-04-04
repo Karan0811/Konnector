@@ -6,7 +6,6 @@ import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
-// import axios from 'axios';
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,25 +25,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     } else {
       register({ name, email, password });
       // console.log('Suceess');
-      //   const newUser = {
-      //     name,
-      //     email,
-      //     password
-      //   };
-      //   try {
-      //     const config = {
-      //       headers: {
-      //         'Content-Type': 'application/json'
-      //       }
-      //     };
-      //     const body = JSON.stringify(newUser);
-
-      //     const res = await axios.post('/api/users', body, config);
-      //     console.log(res.data);
-      //   } catch (err) {
-      //     console.error(err.response.data);
-      //   }
-      //   //   console.log(formData);
     }
   };
 
@@ -65,7 +45,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value={name}
             name='name'
             onChange={e => onChange(e)}
-            // required
+            required
           />
         </div>
         <div className='form-group'>
@@ -75,12 +55,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name='email'
             value={email}
             onChange={e => onChange(e)}
-            // required
+            required
           />
-          <small className='form-text'>
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
+          <small className='form-text'></small>
         </div>
         <div className='form-group'>
           <input
@@ -89,8 +66,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name='password'
             value={password}
             onChange={e => onChange(e)}
-            // required
-            // minlength='6'
+            required
+            minlength='6'
           />
         </div>
         <div className='form-group'>
@@ -100,8 +77,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name='password2'
             value={password2}
             onChange={e => onChange(e)}
-            // required
-            // minlength='6'
+            required
+            minlength='6'
           />
         </div>
         <input type='submit' className='btn btn-primary' value='Register' />

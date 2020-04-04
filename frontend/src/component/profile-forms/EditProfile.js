@@ -69,13 +69,6 @@ const EditProfile = ({
     createProfile(formData, history, true);
   };
 
-  // useEffect(() => {
-  //   getCurrentProfile();
-  // }, [getCurrentProfile]);
-
-  // return loading && profile === null ? (
-  //   <Redirect to='/dashboard' />
-  // ) : (
   return (
     <Fragment>
       <h1 className='large text-primary'>Create Your Profile</h1>
